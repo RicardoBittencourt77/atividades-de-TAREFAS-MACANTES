@@ -13,4 +13,4 @@ try:
         number = collatz(number)
         print(number)
 except ValueError:
-    print('\n\tError: Invalid Value.')
+    print('\n\tError: Invalid Value. You must enter an integer.')
