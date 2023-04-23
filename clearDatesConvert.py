@@ -45,7 +45,7 @@ print('\nLooking for Dates...')
 sleep(3)
 
 for groups in findDates.findall(text):
-    print(groups[0])
+    print('Date found: ', groups[0])
     for each_format in formats:
         try:
             groups_to_string = ''.join(groups[0])
@@ -60,7 +60,7 @@ for groups in findDates.findall(text):
 
 if len(matches) > 0:
     pyperclip.copy('\n'.join(matches))
-    print('\nCopied to clipboard:')
+    print('\nDates copied to clipboard:')
     print('\n'.join(matches))
 else:
     print('No date found.')
