@@ -1,0 +1,112 @@
+		Formatos de Data e de Hora
+
+Especificador de Formato	Formato			Exemplo
+
+%d/%m/%Y			dd/mm/aaaa		21/02/2012
+
+%d-%m-%Y			dd-mm-aaaa		21-02-2012
+
+%d.%m.%Y			dd.mm.aaaa		21.02.2012
+
+%d/%m/%y			dd/mm/aa		21/02/12
+
+%d-%m-%y			dd-mm-aa		21-02-12
+
+%d.%m.%y			dd.mm.aa		21.02.12
+
+%e/%f/%Y			d/m/aaaa		21/2/2012
+
+%e-%f-%Y			d-m-aaaa		21-2-2012
+
+%e.%f.%Y			d.m.aaaa		21.2.2012
+
+%e/%f/%y			d/m/aa			21/2/12
+
+%e-%f-%y			d-m-aa			21-2-12
+
+%e.%f.%y			d.m.aa			21.2.12
+
+re.compile(r'\d{1,2}[/-]\d{1,2}[/-]\d{2,4}')	# para encontrar datas com dividores '/' e '-'
+re.compile(r'\d{1,2}\.\d{1,2}\.\d{2,4}')	# para encontrar datas com dividores '.'
+
+
+%Y/%m/%d			aaaa/mm/dd		2012/02/21
+
+%Y-%m-%d			aaaa-mm-dd		2012-02-21
+
+%Y.%m.%d			aaaa.mm.dd		2012.02.21
+
+%Y/%f/%e			aaaa/m/d		2012/2/21
+
+%Y-%f-%e			aaaa-m-d		2012-2-21
+
+%Y.%f.%e			aaaa.m.d		2012.2.21
+
+re.compile(r'\d{4}[/-]\d{1,2}[/-]\d{1,2}')
+re.compile(r'\d{4}\.\d{1,2}\.\d{1,2}')
+
+
+%m/%d/%Y			mm/dd/aaaa		02/21/2012
+
+%m-%d-%Y			mm-dd-aaaa		02-21-2012
+
+%m.%d.%Y			mm.dd.aaaa		02.21.2012
+
+%m/%d/%y			mm/dd/aa		02/21/12
+
+%m-%d-%y			mm-dd-aa		02-21-12
+
+%m.%d.%y			mm.dd.aa		02.21.12
+
+%f/%e/%Y			m/d/aaaa		2/21/2012
+
+%f-%e-%Y			m-d-aaaa		2-21-2012
+
+%f.%e.%Y			m.d.aaaa		2.21.2012
+
+%f/%e/%y			m/d/aa			2/21/12
+
+%f-%e-%y			m-d-aa			2-21-12
+
+%f.%e.%y			m.d.aa			2.21.12
+
+re.compile(r'\d{1,2}[/-]\d{1,2}[/-]\d{2,4}') # a mesma que a usada para encontrar 'dia'
+re.compile(r'\d{1,2}\.\d{1,2}\.\d{2,4}')
+
+
+%b %e, %Y			Mês d, aaaa		Fevereiro 21, 2012
+
+%B %e, %Y			Mês d, aaaa		Fevereiro 21, 2012
+
+%b %d, %Y			Mês d, aaaa		Fevereiro 21, 2012
+
+%B %d, %Y			Mês d, aaaa		Fevereiro 21, 2012
+
+re.compile(r'[a-zA-Z]{1,9}\s\d{1,2},\s\d{2,4}')
+
+
+
+%Y/%m/%d %H:%M:%S		aaaa/mm/dd hh:mm:ss	2012/02/21 12:00:00
+
+%Y-%m-%d %H:%M:%S		aaaa-mm-dd hh:mm:ss	2012-02-21 12:00:00
+
+re.compile(r'\d{4}[/-]\d{2}[/-]\d{2}\s\d{2}:\d{2}:\d{2}')
+
+
+
+%d/%m/%Y %H:%M:%S		dd/mm/aaaa hh:mm:ss	21/02/2012 12:00:00
+
+%d-%m-%Y %H:%M:%S		dd-mm-aaaa hh:mm:ss	21-02-2012 12:00:00
+
+re.compile(r'\d{2}[/-]\d{2}[/-]\d{4}\s\d{2}:\d{2}:\d{2}')
+
+
+
+%d %B %Y			d Mês aaaa		21 de Fevereiro de 2012
+
+re.compile(r'\d{1,2}\s[de]{1,2}\s[a-zA-Z]{1,9}\s[de]{1,2}\s\d{4}')
+
+
+H:%M:%S				hh:mm:ss		12:00:00
+
+re.compile(r'\d{1,2}[/-]\d{1,2}[/-]\d{2,4}')
